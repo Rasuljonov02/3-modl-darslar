@@ -1,0 +1,404 @@
+@mixin salbor {
+  color: var(--black-20, rgba(0, 0, 0, 0.397));
+  /* 14 Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin salkoproq {
+  color: var(--black-40, rgba(0, 0, 0, 0.63));
+
+  /* 14 Regular */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+@mixin bor {
+  color: var(--black-100, #1c1c1c);
+
+  /* 14 Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+@mixin yogon {
+  color: var(--black-100, #1c1c1c);
+
+  /* 14 Regular */
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cantaner {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr;
+  background-color: black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px 0px rgba(17, 31, 50, 0.05), -14.999999046325684px 26px 67px 0px rgba(17, 31, 50, 0.05), -61.999996185302734px 104px 120.99999237060547px 0px rgba(17, 31, 50, 0.04), -138.99998474121094px 233.99998474121094px 163.99996948242188px 0px rgba(17, 31, 50, 0.03), -247.99998474121094px 417px 194px 0px rgba(17, 31, 50, 0.01), -386.9999694824219px 650.9999389648438px 211.99998474121094px 0px rgba(17, 31, 50, 0);
+  gap: 1px;
+  .chap {
+    height: auto;
+  }
+  .ong {
+    height: auto;
+  }
+}
+.box {
+  border-bottom: 0.729px solid var(--black-10, rgba(0, 0, 0, 0.1));
+  background: var(--white-100, #ffffff);
+  box-sizing: border-box;
+  padding: 15px;
+}
+.byewind {
+  // background-color: aquamarine;
+  width: auto;
+  justify-content: space-evenly;
+  height: auto;
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    p {
+      padding: 5px;
+      border-radius: 50%;
+      background: #dad2d2;
+    }
+  }
+}
+.byewind {
+  h3 {
+    @include salkoproq();
+  }
+  h4 {
+    @include salbor();
+  }
+  h5 {
+    @include bor();
+  }
+  h2 {
+    @include yogon();
+  }
+}
+
+.dashboards {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  width: auto;
+  margin-top: 50px;
+  height: 150px;
+  span {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    p {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .degault {
+      padding: 5px 20px;
+      border-radius: 5.833px;
+      background: var(--black-5, rgba(0, 0, 0, 0.212));
+    }
+  }
+  h2 {
+    @include yogon();
+  }
+  p {
+    @include salkoproq();
+  }
+}
+.pages {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 10px;
+  width: auto;
+  height: 280px;
+  justify-content: space-evenly;
+  h3 {
+    @include yogon();
+    padding: 10px 0;
+  }
+  h6 {
+    @include salkoproq();
+  }
+  p {
+    @include salkoproq();
+    padding: 0 18px;
+  }
+}
+// snovw logo
+.snov {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 280px;
+  img {
+    width: 100px;
+  }
+}
+.notification {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  h3 {
+    @include yogon();
+  }
+  .aslo {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    img {
+      width: 20px;
+      padding: 5px;
+      background-color: #dad2d2;
+      border-radius: 50%;
+    }
+    h3 {
+      @include salkoproq();
+    }
+    p {
+      @include salbor();
+    }
+  }
+}
+.avtivite {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  gap: 1rem;
+
+  h3 {
+    @include yogon();
+  }
+}
+.aslo {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  img {
+    width: 30px;
+  }
+  span {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      @include salkoproq();
+    }
+    p {
+      @include salbor();
+    }
+  }
+}
+// contact
+.contacr {
+  // padding: 8px 0;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: auto;
+  height: auto;
+  h3 {
+    @include yogon();
+  }
+  .call {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include salkoproq();
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+// orta
+.default {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 15px;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    p {
+      @include salbor();
+    }
+    h5 {
+      @include salkoproq();
+    }
+    .p {
+      display: flex;
+      align-items: center;
+      padding: 2px 10px;
+      border-radius: 5.833px;
+      background: var(--black-5, rgba(0, 0, 0, 0.05));
+      width: 80px;
+      @include salbor();
+    }
+  }
+}
+.orta {
+  background-color: #1c1c1c;
+  display: grid;
+  grid-template-rows: 1fr 20fr;
+  gap: 1px;
+  padding: 0;
+}
+.ich {
+  background-color: #ffffff;
+}
+.pas {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.users {
+  display: flex;
+  justify-content: space-between;
+  span {
+    display: flex;
+    gap: 1rem;
+    p {
+      @include salbor();
+    }
+    a {
+      color: #1c1c1c;
+    }
+  }
+}
+.starts {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  h4 {
+    @include salkoproq();
+  }
+
+  hr {
+    width: 200px;
+    padding: 1px 0;
+    border-radius: 11.667px;
+    background: var(--secondary-green-a, #a1e3cb);
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .s {
+    hr {
+      padding: 1px 0;
+      border-radius: 11.667px;
+      background: var(--secondary-purple-b, #c6c7f8);
+    }
+  }
+  .a {
+    hr {
+      padding: 1px 0;
+      border-radius: 11.667px;
+      background: var(--black-100, #1c1c1c);
+    }
+  }
+}
+.griglar {
+  width: 100%;
+  height: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  margin-top: 30px;
+}
+.pagech {
+
+  border-radius: 11.667px;
+  background: var(--primary-light, #F7F9FB);
+  width: 250px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 10px;
+  h4 {
+    color: var(--black-40, rgba(0, 0, 0, 0.4));
+
+    /* 12 Regular */
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 5px 5px;
+    width: 100px;
+    border-radius: 2.917px;
+    background: var(--primary-purple, #dde0e4);
+  }
+  h3 {
+    @include yogon();
+  }
+  p {
+    @include salkoproq();
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      display: flex;
+
+      p {
+        display: flex;
+        gap: 10px;
+        @include salbor();
+      }
+    }
+  }
+}
+.snown {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  p {
+    @include salkoproq();
+  }
+  span {
+    display: flex;
+    gap: 10px;
+  }
+}

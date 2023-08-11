@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #355463;
+  overflow: hidden;
+}
+.road {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: rotate(-20deg);
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #fff, #fff 50%, transparent 50%, transparent 100%);
+  background-size: 50px;
+  animation: animations 0.125s linear infinite;
+}
+@keyframes animations {
+  0% {
+    background-position: 50px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
+}
+
+.polise img {
+  width: 80px;
+  transform: rotate(90deg);
+  background-color: #355463;
+}
+.polise {
+  animation: politsiya 8s infinite alternate;
+  position: absolute;
+  left: 250px;
+}
+@keyframes politsiya {
+  0% {
+    transform: translateX(80px) translateY(-30px);
+  }
+  25% {
+    transform: translateX(-10px) translateY(0px);
+  }
+  50% {
+    transform: translateX(30px) translateY(40px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(0px);
+  }
+  100% {
+    transform: translateX(20px) translateY(-30px);
+  }
+}
+
+.melisa img {
+  position: absolute;
+  left: 300px;
+  width: 80px;
+  bottom: 0px;
+  top: 0px;
+  transform: rotate(90deg);
+  background-color: #355463;
+}
+.melisa {
+  animation: politsiya 10s infinite alternate;
+  position: absolute;
+  left: 250px;
+}
+@keyframes politsiya {
+  0% {
+    transform: translateX(100px) translateY(-50px);
+  }
+  25% {
+    transform: translateX(-10px) translateY(50px);
+  }
+  50% {
+    transform: translateX(-20px) translateY(40px);
+  }
+  75% {
+    transform: translateX(-20px) translateY(1px);
+  }
+  100% {
+    transform: translateX(30px) translateY(-20px);
+  }
+}
+
+.sariq img {
+  position: absolute;
+  left: 600px;
+  width: 80px;
+  bottom: 0px;
+  width: 100px;
+  top: 0px;
+  transform: rotate(90deg);
+  background-color: #355463;
+}
+.sariq {
+  animation: politsiya 9s infinite alternate;
+  position: absolute;
+  left: 250px;
+}
+@keyframes politsiya {
+  0% {
+    transform: translateX(0px) translateY(90px);
+  }
+  25% {
+    transform: translateX(-80px) translateY(60px);
+  }
+  50% {
+    transform: translateX(20px) translateY(-50px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(0px);
+  }
+  100% {
+    transform: translateX(-30px) translateY(40px);
+  }
+}
